@@ -1,0 +1,16 @@
+package com.si5a.myquote.API;
+
+import retrofit2.Retrofit;
+
+public class RetroServer {
+    private static final String baseURL = "https://type.fit/api/";
+    private static Retrofit retro;
+
+    public static Retrofit connectRetrofit(){
+        if(retro==null) {
+            retro = new Retrofit.Builder()
+                    .baseUrl(baseURL)
+                    .addConverterFactory(Gson)
+        }
+    }
+}
